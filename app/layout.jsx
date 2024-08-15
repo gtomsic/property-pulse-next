@@ -1,19 +1,21 @@
-import '@/assets/styles/globals.css';
+import "@/assets/styles/globals.css"
+import Navbar from "@/components/Navbar"
 
 export const metadata = {
-   title: 'Property Pulse',
-   keywords: 'rental, property, realstate',
-   description: 'Find the perfect rental property.',
-};
+    title: "Property Pulse",
+    keywords: "rental, property, realstate",
+    description: "Find the perfect rental property.",
+}
 
 const MainLayout = ({ children }) => {
-   return (
-      <html>
-         <body>
-            <main>{children}</main>
-         </body>
-      </html>
-   );
-};
+    return (
+        <html>
+            <body>
+                <Navbar />
+                <main>{children}</main>
+            </body>
+        </html>
+    )
+}
 
-export default MainLayout;
+export default MainLayout
