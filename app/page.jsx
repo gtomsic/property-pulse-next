@@ -1,12 +1,15 @@
-import Link from 'next/link';
+import Hero from "@/components/Hero"
+import HomeProperties from "@/components/HomeProperties"
+import InfoBoxes from "@/components/InfoBoxes"
 
 const HomePage = () => {
-   return (
-      <div>
-         <h1 className='text-3xl'>Welcome</h1>
-         <Link href='/properties'>Properties</Link>
-      </div>
-   );
-};
+    return (
+        <>
+            <Hero />
+            <InfoBoxes />
+            <HomeProperties />
+        </>
+    )
+}
 
-export default HomePage;
+export default HomePage
