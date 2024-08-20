@@ -58,14 +58,25 @@ export default function PropertyCard({ property }) {
                 </div>
 
                 <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
-                    <p>
-                        <FaMoneyBill className="fa-solid fa-money-bill" />{" "}
-                        Weekly
-                    </p>
-                    <p>
-                        <FaMoneyBill className="fa-solid fa-money-bill" />{" "}
-                        Monthly
-                    </p>
+                    {property.rates?.nightly && (
+                        <p>
+                            <FaMoneyBill className="fa-solid fa-money-bill inline-block mr-2" />{" "}
+                            Nightly
+                        </p>
+                    )}
+
+                    {property.rates?.weekly && (
+                        <p>
+                            <FaMoneyBill className="fa-solid fa-money-bill inline-block mr-2" />{" "}
+                            Weekly
+                        </p>
+                    )}
+                    {property.rates?.monthly && (
+                        <p>
+                            <FaMoneyBill className="fa-solid fa-money-bill inline-block mr-2" />{" "}
+                            Monthly
+                        </p>
+                    )}
                 </div>
 
                 <div className="border border-gray-100 mb-5"></div>
