@@ -1,5 +1,5 @@
-import Image from "next/image"
-import React from "react"
+import Image from "next/image";
+import React from "react";
 
 export default function PropertyHeaderImage({ image }) {
     return (
@@ -7,7 +7,7 @@ export default function PropertyHeaderImage({ image }) {
             <div className="container-xl m-auto">
                 <div className="grid grid-cols-1">
                     <Image
-                        src={`/images/properties/${image}`}
+                        src={image}
                         alt=""
                         className="object-cover h-[400px] w-full"
                         height={0}
@@ -17,5 +17,5 @@ export default function PropertyHeaderImage({ image }) {
                 </div>
             </div>
         </section>
-    )
+    );
 }
