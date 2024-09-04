@@ -1,13 +1,14 @@
-import PropertyDetails from "@/components/PropertyDetails"
-import PropertyHeaderImage from "@/components/PropertyHeaderImage"
-import connectDB from "@/config/database"
-import Property from "@/models/Property"
-import Link from "next/link"
-import { FaArrowLeft } from "react-icons/fa"
+import PropertyDetails from "@/components/PropertyDetails";
+import PropertyHeaderImage from "@/components/PropertyHeaderImage";
+import PropertyImages from "@/components/PropertyImages";
+import connectDB from "@/config/database";
+import Property from "@/models/Property";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 const PropertyPage = async ({ params }) => {
-    await connectDB()
-    const property = await Property.findById(params.id).lean()
+    await connectDB();
+    const property = await Property.findById(params.id).lean();
 
     return (
         <>
@@ -30,7 +31,8 @@ const PropertyPage = async ({ params }) => {
                     </div>
                 </div>
             </section>
+            <PropertyImages images={property.images} />
         </>
-    )
-}
-export default PropertyPage
+    );
+};
+export default PropertyPage;
